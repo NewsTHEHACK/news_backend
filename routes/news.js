@@ -45,7 +45,7 @@ router.get('/one_news', (req, res, next) => {
            ans.push(it);
        });
    });
-   setTimeout(() => {res.json(ans)}, 1000);
+   setTimeout(() => {res.json(ans)}, 1500);
 
 });
 
