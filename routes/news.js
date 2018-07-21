@@ -30,6 +30,7 @@ router.get('/news_map', (req, res, next) => {
     r = 100;
     scale = 10;
     searchDB({}, (res) => {
+        console.log(res);
         res.forEach((it) => {
            let dis = calculate(it.x, it.y, x, y);
            if (dis < r*scale) {
