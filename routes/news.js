@@ -40,7 +40,7 @@ router.get('/news_map', (req, res, next) => {
 
 router.get('/one_news', (req, res, next) => {
     let ans = [];
-   searchDB({_id: req.query.id}, (r) => {
+   searchDB({url: req.query.id}, (r) => {
        r.forEach((it) => {
            ans.push(it);
        });
