@@ -36,7 +36,7 @@ router.get('/news_map', (req, res, next) => {
         });
 
     });
-    res.json(ans);
+    setTimeout(() => {res.json(ans)}, 500);
 });
 
 let processData = (dataObject) => {
