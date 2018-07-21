@@ -50,6 +50,7 @@ socketio.getSocketio = function(server){
 
     io.on('connection', (socket) => {
         let username = nameArray[Math.ceil(Math.random()*4)];
+        console.log("login");
         socket.on('join', (data) => {
             users.push({username:username});
             data.username = username;
