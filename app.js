@@ -11,12 +11,11 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 let newsRouter = require('./routes/news');
 
-const http = require('http').Server(router);
-const io = require('socket.io')(http);
-
 const nameArray = ["lqy", "lwh", "zyf", "wds"];
 
 var app = express();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
 
 
 // view engine setup
