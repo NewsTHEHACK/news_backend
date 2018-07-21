@@ -14,7 +14,7 @@ let newsRouter = require('./routes/news');
 const nameArray = ["lqy", "lwh", "zyf", "wds"];
 
 var app = express();
-const http = require('http').Server(app);
+const http = require('http').createServer(app);
 const io = require('socket.io')(http);
 
 
