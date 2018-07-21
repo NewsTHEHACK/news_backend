@@ -33,6 +33,7 @@ router.get('/news_map', (req, res, next) => {
         res.forEach((it) => {
             ans.push(it);
         });
+        console.log(ans.length)
     });
     setTimeout(() => {res.json(ans)}, 2000);
 });
