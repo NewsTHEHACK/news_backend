@@ -32,13 +32,12 @@ router.get('/news_map', (req, res, next) => {
     searchDB({}, (res) => {
         console.log(res);
         res.forEach((it) => {
-           let dis = calculate(it.x, it.y, x, y);
-           if (dis < r*scale) {
-               ans.push(it);
-           }
+            ans.push(it);
         });
+        console.log(ans);
 
     });
+    console.log(ans);
     setTimeout(() => {res.json(ans)}, 2000);
 });
 
