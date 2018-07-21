@@ -11,7 +11,6 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 let newsRouter = require('./routes/news');
 
-const socketio = require("./socketio");
 const nameArray = ["lqy", "lwh", "zyf", "wds"];
 
 
