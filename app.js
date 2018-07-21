@@ -31,13 +31,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 buildDB();
 
-app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/news', newsRouter);
 
 let users = [];
 
-app.get("/chat", (req, res) => {
+app.get("/", (req, res) => {
     res.sendFile(__dirname + '/chat.index')
 });
 
