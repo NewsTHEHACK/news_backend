@@ -27,6 +27,8 @@ router.get('/news_map', (req, res, next) => {
     console.log(req.query);// x, y, r, scale
     let ans = [];
     let {x, y, r, scale} = req.query;
+    r = 100;
+    scale = 10;
     searchDB({}, (res) => {
         res.forEach((it) => {
            let dis = calculate(it.x, it.y, x, y);
