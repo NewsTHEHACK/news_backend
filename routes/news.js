@@ -38,6 +38,17 @@ router.get('/news_map', (req, res, next) => {
     setTimeout(() => {res.json(ans)}, 2000);
 });
 
+router.get('/one_news', (req, res, next) => {
+    let ans = [];
+   searchDB({_id: req.query.id}, (r) => {
+       r.forEach((it) => {
+           ans.push(it);
+       });
+   });
+   setTimeout(() => {res.json(ans)}, 1000);
+
+});
+
 let processData = (dataObject) => {
     request.get(
         "http://api.map.baidu.com/geocoder/v2/?address=" + dataObject.city + "&output=json&ak=hoDiRIzg2SRe96gQnSZH50yoNTj0cTgS&callback=showLocation",
